@@ -1,6 +1,6 @@
 @if(session()->has('coupon'))
 
-    <div class="ui small header">You have used the coupon below.</div>
+    <div class="ui small header">Ha utilizado el cupón a continuación.</div>
 
     <div class="ui large blue label">
         {{ session('coupon')['name'] }}
@@ -13,17 +13,17 @@
 
 @else
 
-    <div class="ui small header">Do you have a coupon code?</div>
+    <div class="ui small header">Tienes un cupon de descuento?</div>
 
     <form class="ui form" action="{{ route('coupon.store') }}" method="POST">
         @csrf
 
         <div class="three fields">
             <div class="field">
-                <input type="text" name="coupon" placeholder="Coupon Code" required>
+                <input type="text" name="coupon" placeholder="Codigo promocional" required>
             </div>
             <div class="field">
-                <button class="ui button" type="submit">Apply Code</button>
+                <button class="ui button" type="submit">Aplicar cupon</button>
             </div>
         </div>
     </form>

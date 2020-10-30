@@ -5,9 +5,9 @@
 <div class="ui container masthead">
 
     <div class="ui breadcrumb">
-        <a href="{{ route('home') }}" class="section">Home</a>
+        <a href="{{ route('home') }}" class="section">Inicio</a>
         <i class="right angle icon divider"></i>
-        <a class="section">Shop</a>
+        <a class="section">Patio de comidas</a>
         <i class="right angle icon divider"></i>
         <a class="active section">{{ $categoryName }}</a>
     </div>
@@ -19,7 +19,7 @@
 <div class="main ui container">
     <div class="ui grid">
         <div class="three wide column">
-            <h4 class="ui header">By Categories</h4>
+            <h4 class="ui header">Categorias</h4>
             <div class="ui list">
                 @foreach ($categories as $category)
                 <a class="item" href="{{ route('shop.index', ['category' => $category->slug]) }}">
@@ -33,13 +33,13 @@
 
             <div class="ui menu">
                 <div class="ui dropdown item">
-                    Sort By Price
+                   Ordenar por precio
                     <div class="menu">
                         <a class="item" href="{{ route('shop.index', ['category' => request()->category, 'sort' => 'low_high']) }}">
-                            Low to High
+                            Bajo a Alto
                         </a>
                         <a class="item" href="{{ route('shop.index', ['category' => request()->category, 'sort' => 'high_low']) }}">
-                            High to Low
+                            Alto a bajo
                         </a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                 <div class="right menu">
                     <div class="item">
                         <div class="ui transparent icon input">
-                            <input type="text" placeholder="Search within category...">
+                            <input type="text" placeholder="Buscar por categoria...">
                             <i class="search link icon"></i>
                         </div>
                     </div>
@@ -71,8 +71,8 @@
             <h2 class="ui icon center aligned header">
                 <i class="info circle icon"></i>
                 <div class="content">
-                    Sorry! No Products Found..
-                    <div class="sub header">Try search on different categories.</div>
+                    Lo siento! No se han encontrado productos..
+                    <div class="sub header">Intenta con otras categorias.</div>
                 </div>
             </h2>
 

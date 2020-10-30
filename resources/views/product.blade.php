@@ -23,7 +23,7 @@
             <div class="row">
             
                 <div class="six wide column">
-                    <img src="/images/laptop.jpg" class="ui large bordered rounded image">
+                    <img src="/images/salchi.jpeg" class="ui large bordered rounded image">
                 </div>
 
                 <div class="ten wide right floated column">
@@ -45,7 +45,7 @@
 
                         <button class="ui button" type="submit">
                             <i class="shopping cart icon"></i>
-                            Add to Cart
+                            Agregar al carrito
                         </button>
                     </form>
                     

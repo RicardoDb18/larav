@@ -1,6 +1,6 @@
 <div class="item">
     <div class="image">
-        <img src="/images/laptop.jpg">
+        <img src="/images/salchi.jpeg">
     </div>
     <div class="content">
         <a class="header" href="{{ $item->model->path() }}">

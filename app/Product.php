@@ -32,7 +32,7 @@ class Product extends Model
 
     public function getPresentPriceAttribute()
     {
-        return '$' . number_format($this->price, 2);
+        return 'S/ ' . number_format($this->price, 2);
     }
 
     public function path()

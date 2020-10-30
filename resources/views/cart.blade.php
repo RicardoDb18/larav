@@ -5,9 +5,9 @@
 <div class="ui container masthead">
 
     <div class="ui breadcrumb">
-        <a href="{{ route('home') }}" class="section">Home</a>
+        <a href="{{ route('home') }}" class="section">Inicio</a>
         <i class="right angle icon divider"></i>
-        <a class="active section">Cart</a>
+        <a class="active section">Carrito</a>
     </div>
 
 </div>
@@ -23,8 +23,8 @@
 
             @if(Cart::count())
 
-                <h1 class="ui header">{{ Cart::count() }} item(s) in our shopping cart</h1>
-                <p class="lead">You have some items in yout cart</p>
+                <h1 class="ui header">{{ Cart::count() }} item(s) en tu carrito</h1>
+                <p class="lead">Tienes algo en tu carrito</p>
 
                 <div class="ui hidden divider"></div>
 
@@ -44,8 +44,8 @@
     
                 <div class="ui grid">
                     <div class="two column row">
-                        <div class="column">
-                            Shipping is free because we our company is awesome. :)
+                        <div class="column">       
+                            El envío es gratuito porque nuestra empresa es increíble.  :)
                         </div>
                         <div class="column right aligned">
                             <table class="ui cart-amount">
@@ -57,12 +57,12 @@
 
                                     @if(session()->has('coupon'))
                                         <tr>
-                                            <td>Discount ({{ $code }}):</td>
+                                            <td>Descuento ({{ $code }}):</td>
                                             <td>{{ $discount }}</td>
                                         </tr>
 
                                         <tr>
-                                            <td>New Subtotal:</td>
+                                            <td>Nuevo Subtotal:</td>
                                             <td>{{ $newSubtotal }}</td>
                                         </tr>
                                     @endif
@@ -86,21 +86,21 @@
     
                 <div>
                     <a href="{{ route('shop.index') }}" class="ui button">
-                        <i class="shopping cart icon"></i> Continue Shopping
+                        <i class="shopping cart icon"></i> Seguir comprando
                     </a>
                     <a href="{{ route('checkout.index') }}" class="ui right floated primary button">
-                        <i class="cc visa icon"></i> Procced to Checkout
+                        <i class="cc visa icon"></i> Proceder a pagar
                     </a>
                 </div>
 
             @else
 
-                <h1 class="ui header">No items in the cart!</h1>
-                <p class="lead">Try exploring shop section and add ptoducts</p>
+                <h1 class="ui header">No hay comidas en tu bandeja!</h1>
+                <p class="lead">Intente explorar y agregue comidas</p>
 
                 <a class="ui button" href="{{ route('shop.index') }}">
                     <i class="shopping cart icon"></i>
-                    Continue Shopping
+                    Seguir comprando
                 </a>
 
             @endif
@@ -112,7 +112,7 @@
                 <h1 class="ui header">
                     {{ Cart::instance('saveForLater')->count() }} item(s) saved for later
                 </h1>
-                <p class="lead">You have some items in yout cart</p>
+                <p class="lead">Tienes algo en tu carrito</p>
 
                 <div class="ui hidden divider"></div>
 
@@ -128,8 +128,8 @@
 
             @else
 
-                <h1 class="ui header">No items saved for later!</h1>
-                <p class="lead">Try exploring shop section and add products</p>
+                <h1 class="ui header">No hay comidas guardadas!</h1>
+                <p class="lead">Intente buscar algo...</p>
 
             @endif
 

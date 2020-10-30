@@ -1,6 +1,6 @@
 <div class="item">
     <div class="image">
-        <img src="/images/laptop.jpg">
+        <img src="/images/salchi.jpeg">
     </div>
     <div class="content">
         <a class="header" href="{{ $item->model->path() }}">
@@ -13,7 +13,7 @@
 
         <div class="extra">
             <button class="ui red tiny button remove-save-for-later" data-remove-save-for-later="{{ $item->rowId }}">
-                <i class="trash icon"></i> Remove
+                <i class="trash icon"></i> Eliminar
             </button>
 
             <form action="{{ route('saveforlater.destroy', $item->rowId) }}" style="display: none" method="POST" 
@@ -23,7 +23,7 @@
 
             <div class="ui right floated">
                 <button class="ui tiny button move-to-cart" data-move-to-cart="{{ $item->rowId }}">
-                    <i class="shopping cart icon"></i> Move to Cart
+                    <i class="shopping cart icon"></i> Mover al carrito
                 </button>
     
                 <form action="{{ route('saveforlater.movetocart', $item->rowId) }}" style="display: none" method="POST" 

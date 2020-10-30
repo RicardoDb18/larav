@@ -38,7 +38,8 @@ class CartController extends Controller
         if($exists->isNotEmpty()) {
             return redirect()
                 ->route('cart.index')
-                ->withWarning('Item already exists in your cart.');
+                ->withWarning('
+                El artículo ya existe en su carrito.');
         }
 
         Cart::add($request->id, $request->name, 1, $request->price)
@@ -46,7 +47,7 @@ class CartController extends Controller
 
         return redirect()
             ->route('cart.index')
-            ->withSuccess('Item was added to your cart.')
+            ->withSuccess('Se agrego al carrito correctamente.')
             ->withInfo("{$request->name}");
     }
 
@@ -86,7 +87,8 @@ class CartController extends Controller
         ]);
         
         if($v->fails()) {
-            session()->flash('errors', collect(['Quantity must be between 1 to 5']));
+            session()->flash('errors', collect(['
+            La cantidad debe estar entre 1 y 5']));
             return response()->json(true, 422);
         }
 
@@ -94,8 +96,7 @@ class CartController extends Controller
 
         Cart::update($id, $request->quantity);
 
-        session()->flash('success', 'Cart item quantity updated.');
-        session()->flash('info', "Item ({$cart->model->name})'s quantity is updated to {$request->quantity} pieces.");
+        session()->flash('success', 'Cantidad actualizada.');
 
         return response()->json(true);
     }
@@ -113,7 +114,9 @@ class CartController extends Controller
         Cart::remove($id);
 
         return back()
-            ->withWarning('Item was removed from your cart.')
-            ->withInfo("{$cart->model->name} with quanitity of {$cart->qty}.");
+            ->withWarning('
+            El artículo fue eliminado de tu carrito.')
+            ->withInfo("{$cart->model->name} 
+            con cantidad de {$cart->qty}.");
     }
 }

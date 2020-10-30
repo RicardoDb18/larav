@@ -10,6 +10,6 @@ if(! function_exists('parse_money_to_numbers')) {
 if(! function_exists('format_money')) {
     function format_money(string $money)
     {
-        return '$' . number_format($money, 2);
+        return 'S/ ' . number_format($money, 2);
     }
 }

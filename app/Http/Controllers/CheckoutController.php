@@ -48,9 +48,12 @@ class CheckoutController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        if (Cart::instance('default')->count() == 0) {
+            return redirect()->route('bill.show');
+        }
+        return view('bill');
     }
 
     /**

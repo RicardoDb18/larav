@@ -19,7 +19,8 @@ class CouponController extends Controller
         $coupon = Coupon::findByCode($request->coupon);
 
         if (!$coupon) {
-            return back()->withErrors('Invalid coupon code. Please try again.');
+            return back()->withErrors('
+            Código de cupón inválido. Inténtalo de nuevo.');
         }
 
         // dispatch_now(new UpdateCoupon($coupon));
@@ -28,7 +29,7 @@ class CouponController extends Controller
             'discount'  => $coupon->discount( (int) Cart::subtotal()),
         ]);
 
-        return back()->with('success', 'Coupon has been applied!');
+        return back()->with('success', 'El cupon ha sido aplicado!');
     }
 
     /**
@@ -41,6 +42,6 @@ class CouponController extends Controller
     {
         session()->forget('coupon');
 
-        return back()->with('success_message', 'Coupon has been removed.');
+        return back()->with('success_message', 'El cupon ha sido eliminado.');
     }
 }

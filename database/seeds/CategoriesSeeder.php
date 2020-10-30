@@ -16,13 +16,13 @@ class CategoriesSeeder extends Seeder
         $now = Carbon::now()->toDateTimeString();
 
         Category::insert([
-            ['name' => 'Laptops', 'slug' => 'laptops', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Desktops', 'slug' => 'desktops', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Mobile Phones', 'slug' => 'mobile-phones', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Tablets', 'slug' => 'tablets', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'TVs', 'slug' => 'tvs', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Digital Cameras', 'slug' => 'digital-cameras', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Appliances', 'slug' => 'appliances', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Comida Rapida', 'slug' => 'comida rapida', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Pizzas', 'slug' => 'pizzas', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Poke bowls', 'slug' => 'pokes', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Comida Clasica', 'slug' => 'classic', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Postres', 'slug' => 'postres', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Vegana', 'slug' => 'veganas', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Polleria', 'slug' => 'pollerias', 'created_at' => $now, 'updated_at' => $now],
         ]);
     }
 }

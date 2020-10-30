@@ -21,8 +21,8 @@
 @if(count($errors) > 0)
     <div class="ui error message">
         <i class="close icon"></i>
-        <div class="header">
-            There were some errors with your submission.
+        <div class="header">          
+            Hubo algunos errores con su presentación.
         </div>
         <ul class="list">
             @foreach ($errors->all() as $error)
